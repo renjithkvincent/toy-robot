@@ -1,5 +1,9 @@
 module RobotSimulator
   module Coordinates
+    def self.valid_directions
+      %w[NORTH SOUTH EAST WEST]
+    end
+
     def self.step(direction, action)
       {
         NORTH: {

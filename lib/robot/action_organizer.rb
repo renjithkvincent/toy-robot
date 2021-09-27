@@ -2,10 +2,10 @@ module RobotSimulator
   class ActionOrganizer
     def initialize(options = {})
       @robot = options[:robot]
-      @coordinates = Coordinates
     end
 
-    def place(place_array)
+    def place(place_position)
+      place_array = place_position.split(',')
       x_coordinate = place_array[0].to_i
       y_coordinate = place_array[1].to_i
       direction = place_array[2]
