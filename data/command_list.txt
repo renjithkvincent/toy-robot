@@ -3,7 +3,8 @@ MOVE
 LEFT
 REPORT
 RIGHT
-
+LEF
+LEFT YO
 000
 111
 1 0 a b
@@ -16,7 +17,8 @@ REPORT
 dkfjlskdjflksf
 123123123
 MOVE 234234234
-RIGHT
+LEFT
+MOVE
 REPORT
 ~~~~~~~~~~~~@@#$%&T^*&^*^*&^&*
 REPORT

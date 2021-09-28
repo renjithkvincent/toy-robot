@@ -7,8 +7,8 @@ module RobotSimulator
       @coordinates = Coordinates
     end
 
-    def execute_commands(action_file_name)
-      File.open(action_file_name, 'r').each_line do |command|
+    def execute_commands(input_data)
+      input_data.each_line do |command|
         interpret_valid_command(command)
       end
     end
@@ -22,8 +22,8 @@ module RobotSimulator
       @action_interpreter.interpret(action, position_text)
     end
 
-    def valid_command?(command_array, action, position_text)
-      return unless @valid_actions.include? action
+    def valid_command?(command_array, action, position_text=nil)
+      return false unless @valid_actions.include? action
 
       action == @place_action ? valid_position?(position_text) : command_array.one?
     end

@@ -6,11 +6,9 @@ module RobotSimulator
 
     def place(place_position)
       place_array = place_position.split(',')
-      x_coordinate = place_array[0].to_i
-      y_coordinate = place_array[1].to_i
-      direction = place_array[2]
+      x_coordinate, y_coordinate, direction = place_array
 
-      position = Position.new(x_coordinate, y_coordinate, direction)
+      position = Position.new(x_coordinate.to_i, y_coordinate.to_i, direction)
       @robot.safe_update_position position
     end
 
