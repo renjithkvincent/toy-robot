@@ -50,6 +50,6 @@ the robot has a valid position, 2)to update the current position if the input is
 a check to see if a position is within the limits of the table
 
 **Position** Position(x and y coordinates, direction) of the robot is instantiated here. The moves and turns take place
-here. The methods return a new position. The robot is not yet updated. Also has the potential to return a position
+here. The methods return a new position but the robot is not yet updated. Also has the potential to return a position
 outside the table, pushing the robot off the table, on to the ground. The Robot has the smarts to stop that in 
 Robot#safe_update_position
