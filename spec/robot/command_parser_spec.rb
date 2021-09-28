@@ -4,7 +4,7 @@ module RobotSimulator
   describe CommandParser do
     let(:command_parser) { described_class.new }
 
-    describe "#initialize" do
+    describe "class definition" do
       it "should be a part of RobotSimulator module" do
         expect(described_class).to be RobotSimulator::CommandParser
       end
@@ -12,15 +12,15 @@ module RobotSimulator
 
     describe "#valid_command?" do
       context  "with valid command" do
-        let(:command_array) { ['MOVE'] }
+        let(:command_array1) { ['MOVE'] }
+        let(:command_array2) { ['PLACE', '3,2,NORTH'] }
         let(:action1) { 'MOVE' }
-        let(:action2) { 'LEFT' }
-        let(:action3) { 'RIGHT' }
+        let(:action2) { 'PLACE' }
+        let(:position_text) { '3,2,NORTH' }
 
         it "returns true" do
-          expect(command_parser.valid_command?(command_array, action1)).to eq true
-          expect(command_parser.valid_command?(command_array, action2)).to eq true
-          expect(command_parser.valid_command?(command_array, action3)).to eq true
+          expect(command_parser.valid_command?(command_array1, action1)).to eq true
+          expect(command_parser.valid_command?(command_array2, action2, position_text)).to eq true
         end
       end
 

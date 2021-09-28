@@ -4,7 +4,7 @@ module RobotSimulator
   describe Position do
     let(:position) { described_class.new(1, 3, 'NORTH') }
 
-    describe "#initialize" do
+    describe "class definition" do
       it "should be a part of RobotSimulator module" do
         expect(described_class).to be RobotSimulator::Position
       end

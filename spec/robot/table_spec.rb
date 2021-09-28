@@ -4,7 +4,7 @@ module RobotSimulator
   describe Table do
     let(:table) { described_class.new({ height: 5, width: 5 })}
 
-    describe "#initialize" do
+    describe "class definition" do
       it "should be a part of RobotSimulator module" do
         expect(described_class).to be RobotSimulator::Table
       end

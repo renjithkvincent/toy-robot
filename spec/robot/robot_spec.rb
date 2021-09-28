@@ -6,7 +6,7 @@ module RobotSimulator
     let(:table) { Table.new({ width: 5, height: 5})}
     let(:robot) { described_class.new({ table: table }) }
 
-    describe "#initialize" do
+    describe "class definition" do
       it "should be a part of RobotSimulator module" do
         expect(described_class).to be RobotSimulator::Robot
       end
@@ -24,7 +24,7 @@ module RobotSimulator
       end
 
       context "without a valid position" do
-        it "returns true" do
+        it "returns false" do
           expect(robot.placed?).to eq false
         end
       end

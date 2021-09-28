@@ -6,7 +6,7 @@ module RobotSimulator
     let(:action_organizer) { described_class.new(robot: robot) }
     let(:place_location) { '3,1,EAST' }
 
-    describe "#initialize" do
+    describe "class definition" do
       it "should be a part of RobotSimulator module" do
         expect(described_class).to be RobotSimulator::ActionOrganizer
       end
